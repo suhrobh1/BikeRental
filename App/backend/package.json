@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "serve": "npx forever start server.js"
+    "dev": "nodemon server.js"
   },
   "contributors": [
     "Devin Daniels <https://github.com/devingdaniels>",
