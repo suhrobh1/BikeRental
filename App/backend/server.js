@@ -60,7 +60,10 @@ app.get('/api/diagnostic', async (req, res) => {
 const os = require("os");
 const hostname = os.hostname();
 
-app.listen(PORT, () => {
-  // flip server should automatically match whatever server you're on 
-  console.log(`Server running:  http://${hostname}:${PORT}...`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(
+    `Server running on port ${PORT} in ${
+      process.env.NODE_ENV || "development"
+    } mode`
+  );
 });
